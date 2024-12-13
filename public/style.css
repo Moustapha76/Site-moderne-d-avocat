@@ -22,7 +22,7 @@
     align-items: flex-start;
     gap: 15px;
 }
-body{color: var(--white);font-family: var(--main-font);background: url(../images/background.svg);background-size: 100%;position: relative;min-height: 100vh;min-width: 100%;letter-spacing: 1.2px;line-height: 2;font-weight: 100;}
+body{color: var(--white);font-family: var(--main-font);background: url(../images/background.svg);background-size: 100%;position: relative;min-height: 100vh;min-width: 100%;letter-spacing: 1.2px;line-height: 2;font-weight: 200;}
 body::before{content: "";position: absolute;inset: 0;background: linear-gradient(180deg, #00000059, #203f19ad, #0e100d8c, #162f107a, #0c1a0996, #2145197d, #061c0185);z-index: -1;backdrop-filter: blur(200px);}
 h1,h2,h3,h4,h5,h6{font-family: var(--title-font);font-weight: 100;font-style: normal;}
 a{text-decoration: none;color: var(--light);transition: all .3s linear;}
