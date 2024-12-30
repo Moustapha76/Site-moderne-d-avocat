@@ -29,8 +29,8 @@ document.addEventListener('DOMContentLoaded', function(){
       spaceBetween: 50, //init: false,
       navigation: { nextEl: '.swiper-button-next', prevEl: '.swiper-button-prev' },
       breakpoints: {
-          1024: { slidesPerView: 2},
-          768: { slidesPerView: 1},
+          1300: { slidesPerView: 2},
+          991: { slidesPerView: 1},
           640: { slidesPerView: 1},
           320: { slidesPerView: 1}
       }

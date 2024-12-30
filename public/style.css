@@ -240,7 +240,7 @@ div.infos .item{
     background: #ffffff14;
     backdrop-filter: blur(10px);
     border-radius: var(--border-radius);
-    padding: 10px 30px;
+    padding: 10px;
     width: 100%;
     justify-content: center;
 }
@@ -408,7 +408,7 @@ main section.about .jumbotron{
     padding: 20px 40px;
     font-weight: 300;
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     letter-spacing: 1px;
     gap: 40px;
     border: 1px solid #f0b5473b;
@@ -432,6 +432,7 @@ main section.about .jumbotron:nth-child(2) span{background: rgba(255, 255, 255, 
     font-family: var(--title-font);
     letter-spacing: 1px;
     font-weight: 400;
+    color: var(--main-color);
 }
 .img-bloc{
     height: 600px;
@@ -546,10 +547,6 @@ main section.partners .container .img:hover img {
 main section.stats{justify-content: space-between;gap: 8%;padding: 2% 10%;flex-direction: row-reverse;}
 
 main section.stats .text-left {
-    width: 50%;
-    display: flex;
-    flex-direction: column;
-    gap: 4%;
     display: none;
 }
 
@@ -1383,49 +1380,97 @@ section.footer-2 i {
     font-size: 20px;
     padding: 0 0 0 5px;
 }
-/* mobile first */
-@media(max-width: 991px){
+/* responsive */
+@media(max-width: 1300px){
+    section.about.grid:before,section.services:before,section.cases:before,.blog-slider:before,
+    section.accordion:before,main section.atout:before{display: none;}
+    .banner{padding: 10% 5% 0;}
     .navbar{padding: 2% 5%;}
-    header .burger{display: flex;align-items: center;font-size: 40px;}
+    .banner .slogan h1{font-size: 60px;}
+    :root{--title-size: 2.5em;}
+    main section{padding: 5% 5%;}
+    div.infos{margin: 0 5%;}
+    .banner .img-banner{height: 500px;}
+    .banner .img-banner:before,.img-bloc.flex:before{display: none;}
+    section#testimony{flex-direction: column;padding-bottom: 5em;}
+    section#testimony .blog-slider{margin-top: 10%;}
+    .newsletter{width: 90%;}
+    .navbar.fixed{padding: 10px 5%;}
+    section.partners.bg-light{padding: 10% 5% 5%;}
+    main section.services .service-card .img,section.map .zone iframe{height: 300px;}
+    footer .bloc{border-right: 0;text-align: left;align-items: flex-start;}
+    footer{padding: 2% 5%;}
+    section.map{padding: 0 5% 5%;}
+    main section.about{align-items: flex-start;grid-gap: 4%;}
+    div.infos .item{padding: 5px;}
+    main section.about .jumbotron{gap: 20px;padding: 20px;}
+    main section.services .btn-nav{right: 5%;}
+    section.cases .container{grid-template-columns: 1fr 1fr 1fr;}
+    section.accordion .container{padding: 0%;grid-gap: 4%;}
+    section#testimony .title{text-align: center;}
+    .jumbotron span{display: none;}
+    .text-bloc{gap: 10px;}
+    section.tarifs .container{gap: 20px;}
+    .tarif-card{width: auto;}
+}
+@media(max-width: 991px){
+    main section.services .btn-nav {
+        right: calc(50% - 50px);
+        top: 95%;
+        height: fit-content;
+        width: 100px;
+    }
+    .navbar{padding: 0% 5% 0;background: var(--dark);}
+    header .burger{display: flex;align-items: center;font-size: 30px;justify-content: center;}
     .closeBtn{display: block;position: absolute;top: 30px;color: var(--light);font-size: 40px;}
     header nav ul.flex{position: fixed;flex-direction: column;background: var(--dark);width: 100%;left: 0;height: 100vh;z-index: -1;align-items: center;justify-content: center;transition: all .3s linear;opacity: 0;top: 0;display: none;}
     header nav ul.flex.opened{display: flex;opacity: 1;z-index: 9;}
     header ul li a{font-size: 30px;}
     .banner .img-banner,.jumbotron span{display: none;}
-    .banner{display: flex;padding: 20% 5% 0;min-height: 500px;}
-    .banner .slogan h1{font-size: 50px;}
-    .banner .slogan p{font-size: 18px;}
-    main section.partners .container{flex-wrap: wrap;gap: 10px;align-items: center;justify-content: center;}
+    .banner{display: flex;padding: 25% 5% 0;min-height: 500px;}
+    .banner .slogan h1{font-size: 44px;}
+    .banner .slogan p{font-size: 14px;}
     :root{--title-size: 2em;}
     main section.about .jumbotron,section.tarifs .container,section.news .container,
     .footer-1,div.infos{flex-direction: column;}
-    main section.atout .container{flex-wrap: wrap;}
-    main section.partners .container .img{width: 45%;border: 1px solid #ffffff2b;padding: 10px;}
+    main section.atout .container{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+    main section.partners .container .img{width: 100%;border: 1px solid #ffffff2b;padding: 10px;}
     main section.about{grid-template-columns: 1fr;grid-gap: 40px;}
-    .img-bloc{height: 100%;}
+    .img-bloc{
+    height: 400px;
+}
     h2.title{text-align: center;gap: 10px;display: flex;flex-direction: column;}
-    .tarif-card,.item-new,.default-card,footer .bloc{width: 100%;}
+    .tarif-card,.item-new,footer .bloc{width: 100%;}
     .tarif-card:nth-child(2){transform: scale(1) !important;}
     .tarif-card:nth-child(2){transform: scale(1);}    
     section.news .container{gap: 50px;width: 100%;}
-    main section{padding: 10% 5%;}
-    div.infos{align-items: flex-start;padding: 10% 5%;}
+    main section,section.services{padding: 7% 5%;gap: 20px;}
+    div.infos{display: none;}
     footer{padding: 5%;}
     .footer-2{flex-direction: column;gap: 13px;padding: 4% 0 4%;text-align: center;}
-    .banner .slogan{gap: 15px;}
-    main section.stats .item-count{width: 100%;align-items: center;justify-content: center;border: 1px solid #c28f0445;opacity: 1;padding: 20px;}
-    main section.stats{display: grid;grid-template-columns: 1fr 1fr;grid-gap: 20px;padding: 5%;}
-    main section.stats .item-count span:nth-child(1){font-size: 4em;}
-    .blog-slider {
-        max-width: 680px;
-        height: 400px;
-      }
+    .banner .slogan{gap: 15px;padding-top: 12%;}
+    main section.stats .item-count,.default-card{width: 100%;align-items: center;justify-content: center;border: 1px solid #c28f0445;opacity: 1;padding: 20px;}
+    main section.stats{display: grid;grid-template-columns: 1fr;grid-gap: 20px;padding: 10% 5% 0;}
+    main section.stats .item-count span:nth-child(1){font-size: 30px;}
+    .blog-slider{max-width: 100%;height: auto;}
+    main section.stats .container,section.cases .container{display: grid;grid-template-columns: 1fr 1fr;grid-gap: 20px;width: 100%;}
+    main section.partners .container{display: grid;grid-template-columns: 1fr 1fr 1fr;padding: 20px;grid-gap: 20px;}
+    main section.partners .container .img img{width: 100%;}
+      section.accordion .container{grid-template-columns: 1fr;}
+      .blog-slider__img{width: 150px;height: 150px;border-radius: 50%;transform: translateY(-50px);}
+      .blog-slider__item{flex-direction: column;}
+      main section .title,main section .subtitle,h2.title.center,section#testimony .title{text-align: left;width: 100%;text-wrap: balance;line-height: 1.5;}
+      .accordion h2.title.center{padding-bottom: 2em;}
+      .img-content{height: 250px;}
+      .blog-slider__title{text-align: center;}
 }
 @media screen and (max-width: 768px) {
-    .blog-slider__pagination .swiper-pagination-bullet-active {
-      height: 11px;
-      width: 30px;
-    }
+    .txt-loading .letters-loading:before{top: 0px;}
+    .txt-loading{font-size: 30px;}
+    .blog-slider__pagination .swiper-pagination-bullet-active{height: 11px;width: 30px;}
     .blog-slider__pagination {
         transform: translateX(-50%);
         left: 50% !important;
