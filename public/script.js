@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', function(){
   setTimeout(function(){
     document.querySelector('.preloader').style.display = 'none';
-  }, 1000)
+  }, 3000)
   // Menu mobile
   let btnmenu = document.querySelector('header .burger')
   let closeBtn = document.querySelector('header .closeBtn')
