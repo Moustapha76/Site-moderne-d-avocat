@@ -11,7 +11,7 @@
     <!-- Main Style -->
     <link rel="stylesheet" href="./public/style.css">
 </head>
-<body class="body-service">
+<body class="body-news">
     <div class="preloader">
         <img src="./images/loader.gif" alt="loader"/>
         <!-- <div class="txt-loading">
@@ -48,16 +48,16 @@
                 <ul class="flex">
                     <span class="closeBtn"><i class="fa-solid fa-circle-xmark"></i></span>
                     <li><a href="./index.html">Accueil</a></li>
-                    <li><a href="./blog.html">Actualités</a></li>
-                    <li><a href="./servicelist.html" class="active">Nos services</a></li>
+                    <li><a href="./blog.html" class="active">Actualités</a></li>
+                    <li><a href="./servicelist.html">Nos services</a></li>
                     <li><a href="./contact.html">Contact</a></li>
                 </ul>
             </nav>
         </div>
         <div class="banner interne">
             <div class="slogan" data-aos="fade-up" data-aos-duration="1500">
-                <h1>Nos <strong>domaines</strong> d'intervention<br>Des services de <strong>hautes</strong> qualités</h1>
-                <p>Nous vous assistons dans toutes vos situations judiciaires</p>
+                <h1>Nos <strong>actualités</strong> récentes</h1>
+                <p>Votre référence pour des lectures captivantes</p>
                 <div class="btn-group">
                     <a href="./contact.html" class="btn">Contactez-nous</a>
                 </div>
@@ -65,50 +65,87 @@
         </div>
     </header>
     <main>
-        <section class="servicelist">
-            <div class="service-item" data-aos="fade-up" data-aos-duration="1500">
-                <div class="img-service"><img src="./images/services/service-1.jpg" alt="Consultation juridique"></div>
-                <div class="description">
-                    <h2>Consultation juridique</h2>
-                    <p>Nous offrons des consultations juridiques pour vous aider à comprendre vos droits et obligations.</p>
+       <div class="newslist">
+            <section class="news">
+                <div class="container">
+                    <div class="newItem" data-aos="fade-up" data-aos-duration="1500">
+                        <div class="img-new">
+                            <img src="./images/pic-1.jpg" alt="">
+                        </div>
+                        <div class="new-header">
+                            <span class="date"><i class="fa-solid fa-calendar-days"></i> 13 Dec, 2024</span>
+                            <h3 class="new-title">Comment gagner un procés ?</h3>
+                        </div>
+                        <div class="new-body">
+                            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Commodi aspernatur numquam sed ab quidem blanditiis nihil reprehenderit natus nostrum deleniti nobis laboriosam incidunt voluptate illum, necessitatibus dignissimos assumenda quibusdam quasi!</p>
+                            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
+                            <p>Commodi aspernatur numquam sed ab quidem blanditiis nihil reprehenderit natus nostrum deleniti nobis laboriosam incidunt voluptate illum, necessitatibus dignissimos assumenda quibusdam quasi!</p>
+                            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Commodi aspernatur numquam sed ab quidem blanditiis nihil reprehenderit natus nostrum deleniti nobis laboriosam incidunt voluptate illum, necessitatibus dignissimos assumenda quibusdam quasi!</p>
+                        </div>
+                        <div class="new-footer">
+                            <a href="#" class="btn">Retour</a>
+                           <div class="btn-group">
+                                <a href="#" class="btn">Article précédent</a>
+                                <a href="#" class="btn">Article suivant</a>
+                           </div>
+                        </div>
+                    </div>
                 </div>
-            </div>
-            <div class="service-item" data-aos="fade-up" data-aos-duration="1500">
-                <div class="img-service"><img src="./images/services/service-2.jpg" alt="Représentation en justice"></div>
-                <div class="description">
-                    <h2>Représentation en justice</h2>
-                    <p>Nos avocats expérimentés vous représentent devant les tribunaux pour défendre vos intérêts.</p>
+                
+            </section>
+            <aside>
+                <div class="container">
+                    <div class="sticky">
+                        <div class="sujets">
+                            <h2 class="title">Sujets</h2>
+                            <ul>
+                                <li><a href="#">Education</a></li>
+                                <li><a href="#">Société</a></li>
+                                <li><a href="#">Famille</a></li>
+                                <li><a href="#">Civil</a></li>
+                                <li><a href="#">Entreprise</a></li>
+                                <li><a href="#">Nationalité</a></li>
+                                <li><a href="#">Administration</a></li>
+                                <li><a href="#">Travail</a></li>
+                            </ul>
+                        </div>
+                        <div class="recent-posts">
+                            <h2 class="title">Posts récents</h2>
+                            <div class="item" data-aos="fade-up" data-aos-duration="1500">
+                                <div class="img">
+                                    <img src="./images/pic-1.jpg" alt="">
+                                </div>
+                                <div class="body">
+                                     <span class="date"><i class="fa-solid fa-calendar-days"></i> 1 Dec, 2025</span>
+                                    <h3 class="title">Comment gagner un procés ?</h3>
+                                    <a href="#" class="seemore">Lire +</a>
+                                </div>
+                            </div>
+                            <div class="item" data-aos="fade-up" data-aos-duration="1500">
+                                <div class="img">
+                                    <img src="./images/pic-2.jpg" alt="">
+                                </div>
+                                <div class="body">
+                                     <span class="date"><i class="fa-solid fa-calendar-days"></i> 3 Dec, 2025</span>
+                                    <h3 class="title">Le droit de divorce</h3>
+                                    <a href="#" class="seemore">Lire +</a>
+                                </div>
+                            </div>
+                            <div class="item" data-aos="fade-up" data-aos-duration="1500">
+                                <div class="img">
+                                    <img src="./images/pic-3.jpg" alt="">
+                                </div>
+                                <div class="body">
+                                     <span class="date"><i class="fa-solid fa-calendar-days"></i> 20 Jan, 2025</span>
+                                    <h3 class="title">Droit de la famille</h3>
+                                    <a href="#" class="seemore">Lire +</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-            </div>
-            <div class="service-item" data-aos="fade-up" data-aos-duration="1500">
-                <div class="img-service"><img src="./images/services/service-3.jpg" alt="Rédaction de contrats"></div>
-                <div class="description">
-                    <h2>Rédaction de contrats</h2>
-                    <p>Nous rédigeons et révisons des contrats pour garantir qu'ils protègent vos droits.</p>
-                </div>
-            </div>
-            <div class="service-item" data-aos="fade-up" data-aos-duration="1500">
-                <div class="img-service"><img src="./images/services/service-4.jpg" alt="Conseil en entreprise"></div>
-                <div class="description">
-                    <h2>Conseil en entreprise</h2>
-                    <p>Nous fournissons des conseils juridiques aux entreprises pour les aider à naviguer dans les réglementations.</p>
-                </div>
-            </div>
-            <div class="service-item" data-aos="fade-up" data-aos-duration="1500">
-                <div class="img-service"><img src="./images/services/service-5.jpg" alt="Gestion des litiges"></div>
-                <div class="description">
-                    <h2>Gestion des litiges</h2>
-                    <p>Nous vous assistons dans la gestion et la résolution des litiges de manière efficace.</p>
-                </div>
-            </div>
-            <div class="service-item" data-aos="fade-up" data-aos-duration="1500">
-                <div class="img-service"><img src="./images/services/service-6.jpg" alt="Droit de la famille"></div>
-                <div class="description">
-                    <h2>Droit de la famille</h2>
-                    <p>Nous vous aidons dans les affaires de divorce, de garde d'enfants et d'autres questions familiales.</p>
-                </div>
-            </div>
-        </section>
+            </aside>
+        </div>
         <section class="contact">
             <div class="container">
                 <div class="form" data-aos="fade-up" data-aos-duration="1500">
@@ -136,6 +173,18 @@
                 </div>
             </div>
         </section>
+        <section class="newsletter">
+            <div class="newsletter" data-aos="fade-up" data-aos-duration="1500">
+                <span class="ico"><i class="fa-solid fa-envelope"></i></span>
+                <div>
+                    <h3>Newsletter</h3>
+                    <p>Inscrivez vous pour recevoir toutes nos actualités</p>
+                </div>
+                <form action="#">
+                    <input type="mail" name="mail" id="mail" placeholder="Veuillez saisir votre mail"><input type="submit" value="Ok">
+                </form>
+            </div>
+        </section>
     </main>
     <footer>
         <section class="footer-1">
@@ -143,8 +192,8 @@
                 <h3>Accés rapide</h3>
                 <ul>
                     <li><a href="./index.html">Accueil</a></li>
-                    <li><a href="./blog.html">Actualités</a></li>
-                    <li><a href="./servicelist.html" class="active">Nos services</a></li>
+                    <li><a href="./blog.html" class="active">Actualités</a></li>
+                    <li><a href="./servicelist.html">Nos services</a></li>
                     <li><a href="./contact.html">Contact</a></li>
                 </ul>
             </div>
