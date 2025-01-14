@@ -61,11 +61,24 @@ document.addEventListener('DOMContentLoaded', function(){
     }
     
     if (itemToggle == 'false') {
-      this.setAttribute('aria-expanded', 'true');
+      this.setAttribute('aria-expanded', 'true'); 
     }
   }
 
   items.forEach(item => item.addEventListener('click', toggleAccordion));
   // Accordion
-
+  
 })
+$(document).ready(function() {
+  $('.subtitle').each(function() {
+      const text = $(this).text();
+      
+      if (text.length >= 3) {
+          // Wrap the first three letters in a styled span
+          const styledText = `${text.slice(0, -5)}<font style="color: #fff;">${text.slice(-5)}</font>`;
+          
+          // Update the content of the current element
+          $(this).html(styledText);
+      }
+  });
+});
