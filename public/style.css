@@ -5,7 +5,7 @@
     --main-font: "Open Sans";
     --container-size: 1200px;
     --white: #ffffff;
-    --dark: #122d06;
+    --dark: #473109;
     --black: #000000;
     --main-color: #916b24;
     --light: #f6bb14;
@@ -13,6 +13,7 @@
     --title-size: 45px;
     --radius: 0px;
     --border-radius: 10px;
+    --transparent : #ffffff1c
 }
 
 * {
@@ -32,7 +33,7 @@ ul {
     z-index: 99999999;
     height: 100vh;
     width: 100%;
-    background: var(--dark);
+    background: #000000b5;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -41,6 +42,7 @@ ul {
     transition: all .3s linear;
     bottom: 0;
     top: 0;
+    backdrop-filter: blur(20px);
 }
 
 .preloader img {
@@ -163,7 +165,7 @@ ul {
 body {
     color: var(--white);
     font-family: var(--main-font);
-    background: url(../images/background.svg);
+    background: url(../images/background0.svg);
     background-size: 100%;
     position: relative;
     min-height: 100vh;
@@ -179,10 +181,9 @@ body::before {
     content: "";
     position: absolute;
     inset: 0;
-    background: linear-gradient(180deg, #06140042, #0f2705f2, #0c2700cf, #16490073, #002506d4, #071600c4, #04140045);
     z-index: -1;
-    backdrop-filter: blur(200px);
-    /* background: #061400; */
+    backdrop-filter: blur(100px);
+    background: #000000bd;
 }
 
 h1,h2,h3,h4,h5,h6 {
@@ -198,20 +199,21 @@ a {
 }
 
 .btn {
-    border: 1px solid #f0b54742;
-    padding: 8px 20px 10px;
+    border: 0;
+    padding: 10px 20px 12px;
     border-radius: var(--radius);
     font-size: 16px;
     letter-spacing: 1.5px;
     text-align: center;
     font-weight: 400;
-    background: transparent;
-    color: var(--light);
+    background: #ffffff14;
+    backdrop-filter: blur(4px);
+    color: var(--white);
 }
 
 .newslist {
     display: grid;
-    grid-template-columns: 2fr 1.2fr;
+    grid-template-columns: 3fr 1fr;
     padding: 8em 10% 5em;
     grid-gap: 50px;
 }
@@ -219,7 +221,7 @@ a {
 .newslist aside {
     position: sticky;
     display: flex;
-    padding: 0em 2em;
+    padding: 0em 0em;
 }
 
 .newslist aside .container .sticky {
@@ -330,7 +332,7 @@ a {
 
 .newslist section.news .container {
     display: grid;
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr 1fr;
     grid-gap: 40px;
     width: 100%;
 }
@@ -366,9 +368,11 @@ a {
 section.contact .container form button.btn {
     background: var(--light);
     color: var(--dark);
-    padding: 20px 30px;
+    padding: 18px 20px;
     border: none;
     font-weight: 600;
+    margin-top: 15px;
+    float: right;
 }
 
 section.contact .container form button.btn:hover {
@@ -453,7 +457,9 @@ section.contact .container form button.btn:hover {
     background: var(--dark);
     padding: 10px 10% 10px;
     z-index: 8;
-    box-shadow: 10px 10px 50px #00000085;
+    box-shadow: 2px 2px 50px #00000047;
+    background: var(--transparent);
+    backdrop-filter: blur(100px);
 }
 
 a.logo {
@@ -623,6 +629,7 @@ div.infos .item a {
     background-size: cover;
     background-position: right;
     position: relative;
+    padding: 12% 10% 8%;
 }
 
 .body-contact .banner.interne {
@@ -690,6 +697,7 @@ main section {
 
 section.contact {
     padding-top: 4%;
+    padding-bottom: 8%;
 }
 
 section.contact .container {
@@ -728,12 +736,13 @@ section.contact .container div.infos {
     margin: 0;
     border: 0;
     justify-content: center;
-    padding: 0% 4% 2%;
-    background: #173709;
+    padding: 2% 4% 2%;
     backdrop-filter: blur(10px);
     width: 38%;
     text-align: center;
     border-radius: var(--border-radius);
+    background: var(--transparent);
+    backdrop-filter: blur(10px);
 }
 
 section.contact .container div.infos .item {
@@ -744,7 +753,11 @@ section.contact .container div.infos .item {
 
 section.contact .container div.infos .item table {
     text-align: left;
-    padding-left: 20px;
+    /* padding-left: 48px; */
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 section.contact .container div.infos .item table td {
@@ -753,8 +766,8 @@ section.contact .container div.infos .item table td {
 }
 
 section.contact .container div.infos .item h3 {
-    font-size: 20px;
-    /* text-transform: uppercase; */
+    font-size: 22px;
+    text-transform: uppercase;
     font-weight: 100;
     letter-spacing: 2px;
     color: var(--light);
@@ -770,53 +783,43 @@ section.contact .container div.infos .item .group {
     text-align: center;
 }
 
-section.contact .container div.infos h2 {
-    font-size: 45px;
-    width: 100%;
-    border-bottom: 1px solid #ffffff29;
-}
-
 section.contact .container form input,section.contact .container form textarea {
     width: 100%;
-    padding: 15px 18px;
-    background: #00000026;
+    padding: 15px 15px;
+    background: transparent;
     border: 1px solid #ffffff00;
     font-size: 16px;
     letter-spacing: 1px;
     font-family: var(--main-font);
     color: var(--white);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid #ffffff24;
 }
-
 section.contact .container form input:focus, section.contact .container form textarea:focus {
     outline: none;
     background: #81818136;
 }
-
 textarea#message {
     min-height: 203px;
 }
-
 section.contact .container form {
     display: flex;
     flex-direction: column;
-    gap: 5px;
+    gap: 20px;
 }
-
 section.contact .container form button {
     transition: all .3s linear;
 }
-
 .body-service section.contact .container .form {
-    width: 96%;
+    width: 50%;
     position: relative;
     z-index: 1;
 }
-
 section.contact .container .form {
     position: relative;
-    width: 60%;
-    padding: 4% 4%;
-    background: #173709;
+    width: 50%;
+    padding: 4% 0%;
+    background: transparent;
     background-size: cover;
     background-blend-mode: soft-light;
     background-attachment: fixed;
@@ -825,43 +828,52 @@ section.contact .container .form {
     gap: 12px;
     z-index: 1;
     border-radius: var(--border-radius);
-    backdrop-filter: blur(10px);
 }
-
 section.services {
     display: flex;
     flex-direction: column;
     gap: 50px;
 }
-
 section.servicelist {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-gap: 6%;
-    padding: 8em 10% 10%;
+    grid-gap: 0;
+    padding: 8em 10% 4%;
 }
-
 section.servicelist .service-item {
     display: grid;
-    grid-template-columns: 1fr 3fr;
+    grid-template-columns: 1fr 1fr;
     backdrop-filter: blur(10px);
-    grid-gap: 30px;
+    grid-gap: 0px;
+}
+section.servicelist .service-item:nth-child(3), section.servicelist .service-item:nth-child(4) {
+    direction: rtl;
+}
+section.servicelist .service-item .description {
+    background: var(--transparent);
+    backdrop-filter: blur(10px);
 }
 
 section.servicelist .img-service {
-    height: 150px;
+    height: 300px;
     transition: all .3s linear;
 }
 
-section.servicelist .img-service:hover {
-    /* border: 4px solid var(--light); */
+section.servicelist .service-item .description {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    flex-direction: column;
+    padding: 20px 30px;
+    text-align: center;
+    gap: 10px;
 }
 
 section.servicelist .img-service img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    padding: 8px;
     transition: all .3s linear;
     background: #ffffff12;
 }
@@ -872,7 +884,7 @@ section.servicelist .img-service:hover img {
 
 section.servicelist .service-item .description h2 {
     font-weight: 400;
-    font-size: 20px;
+    font-size: 22px;
     color: var(--light);
 }
 
@@ -885,7 +897,7 @@ main section.about {
 main section .title {
     font-size: 18px;
     font-family: var(--main-font);
-    color: var(--white);
+    color: #b1b1b1;
     font-weight: 200;
     font-style: normal;
     letter-spacing: 1.5px;
@@ -943,7 +955,7 @@ main section.about .jumbotron:nth-child(2) {
     display: flex;
     justify-content: center;
     align-items: center;
-    background: #ffffff1c;
+    background: var(--transparent);
     position: relative;
     font-size: 40px;
     padding: 12px 12px;
@@ -1038,7 +1050,7 @@ main section.services .service-card .description {
     position: relative;
     display: flex;
     flex-direction: column;
-    background: var(--dark);
+    background: var(--transparent);
     width: 80%;
     left: 10%;
     top: -40px;
@@ -1046,6 +1058,7 @@ main section.services .service-card .description {
     align-items: center;
     border-radius: var(--border-radius);
     box-shadow: 10px 10px 50px #00000038;
+    backdrop-filter: blur(20px);
 }
 
 main section.services .service-card span.num {
@@ -1075,7 +1088,7 @@ main section.services .service-card h3 {
 
 .swiper-button-next,.swiper-button-prev {
     position: relative;
-    background: #ffffff1c;
+    background: var(--transparent);
     width: 40px;
     height: 40px;
     display: flex;
@@ -1178,25 +1191,23 @@ main section.atout {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 50px;
+    gap: 30px;
 }
 
 section.atout {
-    padding: 2% 10%;
 }
 
 section.atout .title {
-    display: none;
 }
 
 main section.atout .container {
     display: flex;
     justify-content: space-evenly;
-    gap: 50px;
+    gap: 20px;
     width: 100%;
 }
 
-.default-card {
+.default-card,.atout-card {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -1208,15 +1219,16 @@ main section.atout .container {
     align-items: center;
 }
 
-.default-card:hover {
+.default-card:hover,.atout-card:hover {
     transform: translateY(-10px) !important;
     border-color: #cca96747;
     box-shadow: 20px 20px 100px #0000004a;
+    background: var(--dark);
 }
 
-.default-card span {
-    width: 80px;
-    height: 80px;
+.default-card span,.atout-card span {
+    width: 60px;
+    height: 60px;
     border-radius: 50%;
     transition: all .3s linear;
     display: flex;
@@ -1226,7 +1238,7 @@ main section.atout .container {
     color: var(--light);
 }
 
-.default-card span img {
+.default-card span img,.atout-card span img {
     width: 100%;
     height: 100%;
     object-fit: contain;
@@ -1253,7 +1265,7 @@ section#testimony {
     border-radius: 25px;
     height: 400px;
     transition: all 0.3s;
-    background-color: #f0b547;
+    background-color: var(--light);
     background-blend-mode: soft-light;
 }
 
@@ -1377,14 +1389,16 @@ section#testimony {
 
 .blog-slider__code {
     color: var(--black);
-    margin-bottom: 15px;
+    margin-bottom: 10px;
     display: block;
-    font-weight: 500;
+    font-weight: 900;
+    font-size: 24px;
+    text-transform: uppercase;
 }
 
 .blog-slider__title {
-    font-size: 24px;
-    font-weight: 700;
+    font-size: 22px;
+    font-weight: 100;
     color: #0d0925;
     margin-bottom: 20px;
 }
@@ -1398,13 +1412,14 @@ section#testimony {
     position: relative;
     letter-spacing: .5px;
     font-weight: 500;
+    font-size: 16px;
 }
 
 .blog-slider__text span {
     font-size: 6em;
     position: absolute;
     top: 40px;
-    color: #073004;
+    color: var(--dark);
     left: -5px;
 }
 
@@ -1516,16 +1531,24 @@ section.tarifs .container {
     gap: 30px;
 }
 
-.tarif-card {
+.tarif-card,.atout-card {
     gap: 20px;
     border: none;
     align-items: center;
-    background: #ffffff0a;
+    background: var(--transparent);
     backdrop-filter: blur(10px);
     text-align: center;
     width: 30%;
     box-shadow: 10px 10px 40px #00000059;
     padding-bottom: 60px;
+}
+
+.atout-card p {
+    opacity: .6;
+}
+
+.atout-card h3 {
+    font-size: 22px;
 }
 
 .tarif-card h4 {
@@ -1579,12 +1602,12 @@ section.tarifs .container {
 
 section.cases .controls {
     padding: 2% 2%;
-    background: #ffffff08;
+    background: var(--transparent);
     color: #eee;
     display: flex;
     gap: 10px;
     justify-content: center;
-    backdrop-filter: blur(10px);
+    backdrop-filter: blur(20px);
     flex-wrap: wrap;
 }
 
@@ -1655,11 +1678,11 @@ section.cases .container:after {
 
 section.cases .container .mix {
     text-align: left;
-    background: #ffffff08;
+    background: var(--transparent);
     display: none;
     padding: 20px 20px 30px;
     border-radius: var(--border-radius);
-    backdrop-filter: blur(10px);
+    backdrop-filter: blur(20px);
 }
 
 .mix .default-card {
@@ -1673,8 +1696,9 @@ section.cases .container .mix {
 
 .mix .default-card .btn {
     border: 0;
-    padding: 5px 20px;
-    border: 1px solid #f6bb143d;
+    padding: 2px 15px;
+    border: 0;
+    font-size: 14px;
 }
 
 .mix .default-card:hover {
@@ -1843,7 +1867,7 @@ section.newItem {
 
 .btn-retour:hover {
     color: var(--white);
-    background: var(--black);
+    background: var(--dark);
 }
 
 section.newItem .new-header h3 {
@@ -1857,70 +1881,44 @@ section.newItem h3,section.newItem h4,section.newItem h5,section.newItem h6 {
 }
 
 .newsletter {
-    background: url(../images/layer.jpg);
     font-weight: 500;
-    padding: 2em 4% 2em;
-    border-radius: var(--border-radius);
-    width: 75%;
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     text-align: left;
     position: relative;
     font-size: 20px;
-    margin-top: 5em;
+    margin-top: 0;
     justify-content: space-between;
-    /* box-shadow: 10px 10px 50px #000; */
+    background: #0000004f;
+    padding: 40px;
+    flex-direction: column;
+    backdrop-filter: blur(5px);
 }
 
-div.newsletter:before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background: #000000;
-    border-radius: var(--border-radius);
-    z-index: -1;
-    backdrop-filter: blur(3px);
-    box-shadow: 10px 10px 50px #f5ba1403;
-}
+section.footer-0 .adresse {}
 
-.newsletter p {
+
+.newsletter p, section.footer-0 p,section.footer-0 a {
     font-weight: 300;
-    font-size: 18px;
+    font-size: 15px;
     letter-spacing: 2px;
-    opacity: .5;
+    opacity: 1;
+    color: #f5f5f58c;
 }
 
 .newsletter h3 {
-    font-size: 40px;
-    line-height: 1.2;
     color: var(--white);
     font-weight: 100;
-    letter-spacing: 4px;
 }
 
-.newsletter span.ico {
-    position: absolute;
-    font-size: 25px;
-    top: -75px;
-    opacity: 1;
-    left: 50%;
-    z-index: 9;
-    color: var(--light);
-    width: 60px;
-    height: 60px;
-    transform: translate(-50%);
-    background: #353535a1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    transition: all .3s linear;
-    border-radius: 50%;
+section.footer-0 h3 {
+    color: var(--white);
+    font-weight: 100;
+    font-size: 22px;
 }
 
-.newsletter span.ico:hover {
-    background: var(--light);
-    color: var(--dark);
-}
+
+
 
 .newsletter span.ico:before {
     content: "";
@@ -1948,18 +1946,19 @@ section.news .container {
     flex-direction: column;
     border-radius: var(--border-radius);
     overflow: hidden;
-    background: var(--dark);
+    background: var(--transparent);
+    backdrop-filter: blur(10px);
 }
 
 .img-new {
-    height: 450px;
+    height: 350px;
     overflow: hidden;
 }
 
 section.newItem .img-new {
     width: 100%;
     height: 600px;
-    border: 10px solid #264319;
+    border: 10px solid var(--white);
     border-radius: var(--border-radius);
 }
 
@@ -2014,10 +2013,10 @@ section.newItem .new-body {
     letter-spacing: 1px;
     font-size: 14px;
     position: absolute;
-    top: -30px;
+    top: -38px;
     right: 35px;
-    background: #f6bb14;
-    padding: 5px 20px;
+    background: #e1e1e1;
+    padding: 5px 10px;
     font-weight: 400;
     box-shadow: 10px 10px 40px #00000047;
     transform: rotate(0deg);
@@ -2028,10 +2027,10 @@ section.newItem .new-body {
     content: "";
     position: absolute;
     width: 15px;
-    height: 30px;
+    height: 38px;
     right: -15px;
     top: 0%;
-    background: #ffffff;
+    background: #8d8d8d;
     z-index: 0;
     clip-path: polygon(0 0, 0 0, 75% 100%, 0% 100%);
     transform: rotateY(0deg);
@@ -2040,13 +2039,13 @@ section.newItem .new-body {
 .new-body .date:before {
     content: "";
     position: absolute;
-    width: 23px;
-    height: 19px;
-    right: -23px;
+    width: 100%;
+    height: 4px;
+    right: 0;
     bottom: 0px;
-    /* background: #595856; */
+    background: #ffffff;
     z-index: 0;
-    clip-path: polygon(0 0, 50% 0, 0 100%, 0 100%);
+    /* clip-path: polygon(0 0, 50% 0, 0 100%, 0 100%); */
 }
 
 
@@ -2056,6 +2055,7 @@ section.map {
     align-items: center;
     justify-content: center;
     gap: 25px;
+    padding-bottom: 10%;
 }
 
 section.map .container {
@@ -2072,6 +2072,7 @@ section.map h2.title {
 
 section.map .zone iframe {
     width: 100%;
+    filter: opacity(0.5);
 }
 
 section.map .zone:hover iframe {
@@ -2080,8 +2081,8 @@ section.map .zone:hover iframe {
 
 .newsletter form {
     margin-top: 15px;
-    width: 45%;
-    text-align: right;
+    width: 100%;
+    text-align: left;
 }
 
 .newsletter form input:focus {
@@ -2090,10 +2091,10 @@ section.map .zone:hover iframe {
 }
 
 .newsletter form input {
-    padding: 12px 15px 11px;
+    padding: 12px 15px 14px;
     background: transparent;
     border: 0;
-    font-size: 18px;
+    font-size: 14px;
     font-family: var(--main-font);
     font-weight: 100;
     letter-spacing: 2px;
@@ -2101,11 +2102,12 @@ section.map .zone:hover iframe {
 }
 
 .newsletter form input[type="mail"] {
-    background: #ffffff21;
+    background: #ffffff00;
     color: var(--white);
     width: 70%;
-    font-size: 18px;
-    padding: 12px 20px 11px;
+    font-size: 14px;
+    padding: 12px 20px 13px 0px;
+    border-bottom: 1px solid #f6bb145e;
 }
 
 .newsletter form input[type="mail"]:hover {
@@ -2138,8 +2140,8 @@ h3.new-title {
 }
 
 footer {
-    padding: 2% 10% 2%;
-    /* background: var(--dark); */
+    background: var(--transparent);
+    backdrop-filter: blur(10px);
 }
 
 .footer-1 {
@@ -2148,6 +2150,20 @@ footer {
     gap: 40px;
     padding-bottom: 4%;
 }
+
+section.footer-0 {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 2.5fr;
+    padding: 2% 10% 4%;
+    position: relative;
+    grid-gap: 40px;
+}
+
+section.footer-1, section.footer-2 {
+    padding: 2% 10%;
+}
+
+section.footer-0 .adresse {}
 
 footer .bloc {
     display: flex;
@@ -2473,10 +2489,6 @@ section.footer-2 i {
 
     :root {
         --title-size: 22px;
-    }
-
-    section.contact .container div.infos h2 {
-        font-size: var(--title-size);
     }
 
     section.servicelist .img-service {
