@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap'); 
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
-@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css'); :root {
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css'); 
+:root {
     --title-font: "Playfair Display";
     --main-font: "Open Sans";
     --container-size: 1200px;
@@ -13,7 +14,7 @@
     --title-size: 45px;
     --radius: 0px;
     --border-radius: 10px;
-    --transparent : #ffffff1c
+    --transparent: #ffffff12;
 }
 
 * {
@@ -209,8 +210,14 @@ a {
     background: #ffffff14;
     backdrop-filter: blur(4px);
     color: var(--white);
+    transition: all .3s linear;
 }
-
+.btn-default{
+    background: transparent;
+    color: var(--light);
+    border: 1px solid #f6bb1438;
+    backdrop-filter: none;
+}
 .newslist {
     display: grid;
     grid-template-columns: 3fr 1fr;
@@ -696,7 +703,7 @@ main section {
 }
 
 section.contact {
-    padding-top: 4%;
+    padding-top: 8%;
     padding-bottom: 8%;
 }
 
@@ -818,7 +825,7 @@ section.contact .container form button {
 section.contact .container .form {
     position: relative;
     width: 50%;
-    padding: 4% 0%;
+    padding: 0% 0% 4%;
     background: transparent;
     background-size: cover;
     background-blend-mode: soft-light;
@@ -837,14 +844,14 @@ section.services {
 section.servicelist {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-gap: 0;
+    grid-gap: 20px;
     padding: 8em 10% 4%;
 }
 section.servicelist .service-item {
     display: grid;
     grid-template-columns: 1fr 1fr;
     backdrop-filter: blur(10px);
-    grid-gap: 0px;
+    grid-gap: 20px;
 }
 section.servicelist .service-item:nth-child(3), section.servicelist .service-item:nth-child(4) {
     direction: rtl;
@@ -857,6 +864,7 @@ section.servicelist .service-item .description {
 section.servicelist .img-service {
     height: 300px;
     transition: all .3s linear;
+    overflow: hidden;
 }
 
 section.servicelist .service-item .description {
@@ -878,9 +886,7 @@ section.servicelist .img-service img {
     background: #ffffff12;
 }
 
-section.servicelist .img-service:hover img {
-    padding: 0;
-}
+section.servicelist .img-service:hover img {transform: scale(1.2) rotate(10deg);}
 
 section.servicelist .service-item .description h2 {
     font-weight: 400;
@@ -1005,8 +1011,7 @@ main section.about .jumbotron:nth-child(2) span {
 }
 
 .img-bloc:hover img {
-    transform: scale(1.2);
-    filter: brightness(0.6);
+    transform: scale(1.2) rotate(10deg);
 }
 
 main section.services .services-list {
@@ -1042,8 +1047,7 @@ main section.services .service-card .img img {
 }
 
 main section.services .service-card .img:hover img {
-    transform: scale(1.5);
-    filter: brightness(0.5);
+    transform: scale(1.2) rotate(10deg);
 }
 
 main section.services .service-card .description {
@@ -1277,7 +1281,7 @@ section#testimony {
 
 .blog-slider__item.swiper-slide-active .blog-slider__img img {
     opacity: 1;
-    transition-delay: 0.3s;
+    transition-delay: 0s;
 }
 
 .blog-slider__item.swiper-slide-active .blog-slider__content > * {
@@ -1374,7 +1378,11 @@ section#testimony {
     display: block;
     opacity: 0;
     border-radius: 20px;
-    transition: all 0.3s;
+    transition: all 0.3s linear;
+}
+
+.blog-slider__img:hover img {
+    transform: scale(1.2) rotate(10deg);
 }
 
 .blog-slider__content {
@@ -1488,7 +1496,7 @@ section#testimony {
 
 .tarif-card span i {
     color: var(--light);
-    font-size: 40px;
+    font-size: 25px;
     letter-spacing: 0px;
 }
 
@@ -1571,7 +1579,7 @@ section.tarifs .container {
 }
 
 .tarif-card:hover span i {
-    font-size: 45px;
+    font-size: 30px;
     color: var(--dark);
 }
 
@@ -1672,8 +1680,7 @@ section.cases .container:after {
 }
 
 .img-content:hover img {
-    transform: scale(1.2);
-    filter: brightness(0.6);
+    transform: scale(1.2) rotate(10deg);
 }
 
 section.cases .container .mix {
@@ -1967,7 +1974,6 @@ section.newItem .img-new {
     height: 100%;
     object-fit: cover;
     transition: all .3s linear;
-    filter: brightness(1);
 }
 
 section.newItem .img-new img {
@@ -1975,8 +1981,7 @@ section.newItem .img-new img {
 }
 
 .img-new:hover img {
-    transform: scale(1.2);
-    filter: brightness(0.6);
+    transform: scale(1.2) rotate(10deg);
 }
 .new-header{
     display: flex;
